@@ -26,7 +26,7 @@
 
     <form action="hospital_login.php" method="post">
     <div class="imgcontainer">
-    <img src="doc.jpg" alt="Avatar" class="avatar">
+    <img src="./images/" alt="Avatar" class="avatar">
     </div>
     <div class="container">
         <b>Username:<b><input type="text" name="username"><br>

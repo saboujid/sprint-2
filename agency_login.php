@@ -20,7 +20,7 @@
     <h3> Log in </h3>
     <form action="agency_login.php" method="post">
     <div class="imgcontainer">
-    <img src="av.jpg" alt="Avatar" class="avatar">
+    <img src="./images/av.jpg" alt="Avatar" class="avatar">
   </div>
 
     <div class="container">

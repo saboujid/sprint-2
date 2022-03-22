@@ -25,7 +25,7 @@
     <h3> Registration form </h3>
     <form id="formID" action="visitors_register.php" method="post">
     <div class="imgcontainer">
-    <img src="vi.jpg" alt="Avatar" class="avatar">
+    <img src="./images/" alt="Avatar" class="avatar">
     </div>
     <div class="container">
         <b>Name: <b> <input type="text" name="name"><br>
