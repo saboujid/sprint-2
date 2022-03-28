@@ -1,12 +1,27 @@
+<!DOCTYPE html>
 <html>
-    
 <head>
-<meta name = "viewport", content="width = device-width, initial-scale=1">
-<link rel = "stylesheet" href = "table.css">
+  <meta name = "viewport", content="width = device-width, initial-scale=1">
+  <title> Corona Archive </title>
+  <!-- <p style = "font-family:georgia,garamond,serif;font-size:70px;">
+  <b> WELCOME TO THE UEFA CHAMPIONS LEAGUE INFO PAGE!</b> </p> -->
+  <link rel = "stylesheet" href = "t.css"> 
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <link
+    rel="stylesheet"
+    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;900&display=swap"
+    rel="stylesheet"
+  />
 </head>
 
 <body>
-
     <?php 
     
     $dbhost = 'localhost';
@@ -17,25 +32,26 @@
     
     $conn= mysqli_connect('localhost', $user, $pass, $db);
     ?>
-
-    <ul>
-    <button class="button" ><a href="main_page.html" class="back"> Go back </a> </button>
-    </ul>
-
-    <h3> Registration form </h3>
-    <form id="formID" action="visitors_register.php" method="post">
-    <div class="imgcontainer">
-    <img src="./images/" alt="Avatar" class="avatar">
+    <div class="hero">
+    <a href="index.php" class="back"><button class="back-btn" > Go back </button></a>
+        <div class="form-box">
+            <div class="hp-text">
+                <h2>Registration Form</h2>
+            </div>
+            <div class="logo-hp">
+                <img src="./images/av.jpg">
+            </div>
+            <form id="formID" action="visitors_register.php" method="post" class="input-grp">
+                <input type="text" name="name" class="input-field" placeholder="Full Name">
+                <input type="text" name="address" class="input-field" placeholder="Addresse">
+                <input type="text" name="phone" class="input-field" placeholder="Phone">
+                <input type="text" name="email" class="input-field" placeholder="Enter your email">
+                <input type="hidden" name="deviceID" id="deviceID" value="">
+                <input type="submit" name="signup">
+            </form>
+        </div>    
     </div>
-    <div class="container">
-        <b>Name: <b> <input type="text" name="name"><br>
-        <b>Address: <b><input type="text" name="address"><br>
-        <b>Phone: <b> <input type="text" name="phone"><br>
-        <b>E-mail: <b><input type="text" name="email"><br>
-        <input type="hidden" name="deviceID" id="deviceID" value=""><br> 
-        <input type="submit" name="signup">
-    </div>
-    </form>
+
 
     <script>
         var navigator_info = window.navigator;
@@ -53,7 +69,7 @@
         document.getElementById("deviceID").value = uid
     </script>
 
-    <?php 
+<?php 
     if (isset($_POST['signup'])) {
     $name = $_POST['name'];
     $address = $_POST['address'];
@@ -92,8 +108,5 @@
     ?>
 
 
-
-
 </body>
-
 </html>
