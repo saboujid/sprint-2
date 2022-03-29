@@ -47,7 +47,7 @@
     </div>
 
     <?php
-    if (isset($_POST['login'])) {
+    if (isset($_POST['signup'])) {
 
     if (!empty($_POST['username']) && !empty($_POST['password'])) {
     $username = $_POST['username'];

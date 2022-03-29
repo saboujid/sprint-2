@@ -13,15 +13,11 @@
 
 <body> 
     <?php 
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+    include("connect.php");
     
-    $dbhost = 'localhost';
-    $user ='seteam17';
-    $pass ='XFc73r0J';
-    $db ='seteam17';
-    
-    
-    $conn= mysqli_connect('localhost', $user, $pass, $db);
-
     $result = mysqli_query($conn, "SELECT * FROM Places");
     ?>
 
