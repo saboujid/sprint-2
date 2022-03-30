@@ -18,12 +18,12 @@
 
 <body>
     <?php
-
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
     include("connect.php");
     ?>
+
     <div class="hero">
         <a href="index.php" class="back"><button class="back-btn"> Go back </button></a>
         <div class="form-box">
@@ -35,9 +35,10 @@
             </div>
             <form id="formID" action="visitors_register.php" method="post" class="input-grp">
                 <input type="text" name="name" class="input-field" placeholder="Full Name">
-                <input type="text" name="address" class="input-field" placeholder="Addresse">
+                <input type="text" name="address" class="input-field" placeholder="Address">
                 <input type="text" name="phone" class="input-field" placeholder="Phone">
-                <input type="text" name="email" class="input-field" placeholder="Enter your email">
+                <input type="text" name="email" class="input-field" placeholder="Email">
+                <input type="password" name="password" class="input-field" placeholder="Password">
                 <input type="hidden" name="deviceID" id="deviceID" value="">
                 <input type="submit" name="signup">
             </form>
@@ -67,12 +68,13 @@
         $address = $_POST['address'];
         $phone = $_POST['phone'];
         $email = $_POST['email'];
+        $password = $_POST['password'];
         $deviceID = $_POST['deviceID'];
 
         $minDigits = 9;
         $maxDigits = 14;
 
-        if ($name == '' || $address == '' || $phone == '' || $email == '' || $deviceID == '') {
+        if ($name == '' || $address == '' || $phone == '' || $email == '' || $password == '') {
             echo 'Information cannot be empty';
         } elseif (!preg_match("/^[a-zA-Z ]+$/", $name)) { // Name Constraint
             echo 'Invalid name';
@@ -86,12 +88,14 @@
         } else {
 
             // Insert into database
-            $sql = "INSERT INTO Visitor (visitor_name, visitor_address, visitor_phone, visitor_email, device_ID, infected) VALUES ('$name', '$address', '$phone', '$email', '$deviceID', 0)";
+            $sql = "INSERT INTO Visitor (visitor_name, visitor_address, visitor_phone, visitor_email, visitor_password, infected) VALUES ('$name', '$address', '$phone', '$email', '$password', 0)";
             if (mysqli_query($conn, $sql)) {
-                header("Location:visitors_camera.php");
+                echo "Now you can Log In to scan the QR!";
+                // header("Location:visitors_camera.php");
+                header("Location:visitor_login.php");
             } else {
                 echo 'Device ID detected in database';
-                header("Location:visitors_camera.php");
+                // header("Location:visitors_camera.php");
             }
         }
     }

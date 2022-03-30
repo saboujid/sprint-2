@@ -24,6 +24,7 @@
     error_reporting(E_ALL);
     include("connect.php");
     ?>
+    
     <div class="hero">
         <a href="index.php" class="back"><button class="back-btn"> Go back </button></a>
         <div class="form-box-pr">
@@ -35,7 +36,9 @@
             </div>
             <form action="places_register.php" method="post" class="input-grp">
                 <input type="text" name="name" class="input-field" placeholder="Full Name">
-                <input type="text" name="address" class="input-field" placeholder="Addresse">
+                <input type="text" name="address" class="input-field" placeholder="Address">
+                <input type="text" name="email" class="input-field" placeholder="Email">
+                <input type="password" name="password" class="input-field" placeholder="password">
                 <input type="hidden" name="deviceID" id="deviceID" value="">
                 <input type="submit" name="signup">
             </form>
@@ -46,16 +49,21 @@
     if (isset($_POST['signup'])) {
         $name = $_POST['name'];
         $address = $_POST['address'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
 
-        if ($name == '' || $address == '') {
+        if ($name == '' || $address == '' || $password == '') {
             echo 'Information cannot be empty';
         } elseif (!preg_match("/^[a-zA-Z ]+$/", $name)) { // Name Constraint
             echo 'Invalid name';
             error_log("Invalid name", 0);
+        } elseif (!preg_match('/^[\w\.]+@\w+\.\w+$/i', $email)) { // Email Constraint
+            echo 'Invalid email';
+            error_log("Invalid email", 0);
         } else {
 
             // Insert into database
-            $sql = "INSERT INTO Places (place_name, place_address) VALUES ('$name', '$address')";
+            $sql = "INSERT INTO Places (place_name, place_address, place_email, place_password) VALUES ('$name', '$address', '$email', '$password')";
             if (mysqli_query($conn, $sql)) {
                 header("Location:places_qrcode.html");
             } else {
