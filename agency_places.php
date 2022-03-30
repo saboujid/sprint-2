@@ -26,7 +26,7 @@
     </ul>
 
     <table id="entity_table">
-        <tr> <th>Name</th> <th>Address</th> </tr>
+        <tr> <th>Place</th> <th>Address</th> </tr>
         <?php while ($array = mysqli_fetch_assoc($result)) { ?>
         <tr><td> <?php echo $array["place_name"]; ?> </td>
         <td> <?php echo $array["place_address"]; ?> </td> </tr>

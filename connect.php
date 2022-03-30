@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 $dbhost = 'localhost';
 $user = 'seteam17';
 $pass = 'XFc73r0J';
-$db = 'Corona';
+$db = 'seteam17';
 
 
 $conn = mysqli_connect($dbhost, $user, $pass, $db);

@@ -17,11 +17,15 @@
     </ul>
 
     <div id="t1">
-    <a href="agency_visitor.php" class="back"> View visitors list </a> <br>
+    <a href="agency_visitor.php" class="back"> View Visitors list </a> <br>
     </div>
     <br>
     <div id="t2">
-    <a href="agency_places.php" class="back"> View places list </a>
+    <a href="agency_places.php" class="back"> View Places list </a>
+    </div>
+    <br>
+    <div id="t2">
+    <a href="agency_hospital.php" class="back"> View Hospital list </a>
     </div>
     <br>
 

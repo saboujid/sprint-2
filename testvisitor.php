@@ -67,7 +67,7 @@
     } else {
 
         // Insert into database
-        $sql = "INSERT INTO Visitor (visitor_name, v_address, v_phone_number, v_email, device_ID, infected) VALUES ('$name', '$address', '$phone', '$email', '$deviceID', 0)";
+        $sql = "INSERT INTO Visitor (visitor_name, visitor_address, visitor_phone, visitor_email, device_ID, infected) VALUES ('$name', '$address', '$phone', '$email', '$deviceID', 0)";
         if (mysqli_query($conn, $sql)){
             echo "Registration successful";
         } else {

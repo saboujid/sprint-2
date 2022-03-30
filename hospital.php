@@ -34,9 +34,9 @@
         <tr> <th>Name</th> <th>Address</th> <th>Phone</th> <th>Email</th> <th>Infected</th> </tr>
         <?php while ($array = mysqli_fetch_assoc($result)) { ?>
         <tr><td> <?php echo $array["visitor_name"]; ?> </td>
-        <td> <?php echo $array["v_address"]; ?> </td>
-        <td> <?php echo $array["v_phone_number"]; ?> </td>
-        <td> <?php echo $array["v_email"]; ?> </td>
+        <td> <?php echo $array["visitor_address"]; ?> </td>
+        <td> <?php echo $array["visitor_phone"]; ?> </td>
+        <td> <?php echo $array["visitor_email"]; ?> </td>
         <td> <?php if ($array["infected"] = 0) {
                             echo "infected";
                     }else {
