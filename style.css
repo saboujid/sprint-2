@@ -69,18 +69,87 @@
     width: 350px;
     height: 400px;
     position: relative;
-    margin: 8% 60%;
+    margin: 4% 38%;
     background-color: white;
     border-radius: 12px;
     overflow: hidden;
     padding: 5px;
-   animation-duration: 1s; /* the duration of the animation */
+    animation-duration: 1s; /* the duration of the animation */
     animation-timing-function: ease-in-out; /* how the animation will behave */
     animation-delay: 0s; /* how long to delay the animation from starting */
     animation-iteration-count: 1; /* how many times the animation will play */
     animation-name: slideInFromLeft; /* the name of the animation we defined above */ 
 }
 
+.form-boxi{
+    width: 300px;
+    height: 160px;
+    position: relative;
+    margin: 13% 60%;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 5px;
+    animation-duration: 1s; /* the duration of the animation */
+    animation-timing-function: ease-in-out; /* how the animation will behave */
+    animation-delay: 0s; /* how long to delay the animation from starting */
+    animation-iteration-count: 1; /* how many times the animation will play */
+    animation-name: slideInFromLeft; /* the name of the animation we defined above */ 
+}
+
+
+.form-box-r{
+    width: 300px;
+    height: 220px;
+    position: relative;
+    margin: 8% 38%;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 5px;
+    animation-duration: 1s; /* the duration of the animation */
+    animation-timing-function: ease-in-out; /* how the animation will behave */
+    animation-delay: 0s; /* how long to delay the animation from starting */
+    animation-iteration-count: 1; /* how many times the animation will play */
+    animation-name: slideInFromLeft; /* the name of the animation we defined above */ 
+}
+
+
+.back-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin-left: 80%;
+    margin-top: 20px;
+    background:white;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    animation-duration: 1s;
+    /* the duration of the animation */
+    animation-timing-function: ease-in-out;
+    /* how the animation will behave */
+    animation-delay: 0s;
+    /* how long to delay the animation from starting */
+    animation-iteration-count: 1;
+    /* how many times the animation will play */
+    animation-name: slideInFromLeft;
+    /* the name of the animation we defined above */
+}
+
+.back-btn a{
+    color: #000000;
+}
+
+.back-btn:hover{
+    background: #b13c3c;
+    color: white;
+}
+
+.back-btn:hover {
+    transition: all 0.4s ease;
+    color: white;
+}
 .button-box{
     width: 220px;
     margin: 35px auto;
