@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: 'poppins';
+    align-items: center;
 }
 
 @keyframes slideInFromLeft {
@@ -186,4 +187,9 @@ input[type=submit]:hover {
     font-size: 12px;
     bottom: 68px;
     position: absolute;
+}
+
+.scanner{
+    align-items: center;
+    margin-top: 30px;
 }

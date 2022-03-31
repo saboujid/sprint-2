@@ -55,9 +55,9 @@
 
         if ($name == '' || $address == '' || $password == '') {
             echo 'Information cannot be empty';
-        } elseif (!preg_match("/^[a-zA-Z ]+$/", $name)) { // Name Constraint
-            echo 'Invalid name';
-            error_log("Invalid name", 0);
+        // } elseif (!preg_match("/^[a-zA-Z ]+$/", $name)) { // Name Constraint
+        //     echo 'Invalid name';
+        //     error_log("Invalid name", 0);
         } elseif (!preg_match('/^[\w\.]+@\w+\.\w+$/i', $email)) { // Email Constraint
             echo 'Invalid email';
             error_log("Invalid email", 0);
@@ -66,7 +66,14 @@
             // Insert into database
             $sql = "INSERT INTO Places (place_name, place_address, place_email, place_password) VALUES ('$name', '$address', '$email', '$password')";
             if (mysqli_query($conn, $sql)) {
-                header("Location:places_qrcode.html");
+?>
+ <!-- starting session to generate qr -->
+                <?php
+                session_start();
+                $_SESSION['puser'] = $email;
+
+
+                header("Location:places_qrcode.php");
             } else {
                 echo 'Failed to register';
             }

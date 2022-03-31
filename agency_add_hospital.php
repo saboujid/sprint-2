@@ -17,56 +17,58 @@
 </head>
 
 <body>
-
     <?php
 
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
     include("connect.php");
-
     ?>
 
     <div class="hero">
         <a href="index.php" class="back"><button class="back-btn"> Home </button></a>
-        <a href="login.php" class="back"><button class="back-btn"> Go back </button></a>
+        <a href="agency.php" class="back"><button class="back-btn"> Go back </button></a>
         <div class="form-box-pr">
             <div class="hp-text">
-                <h2>Visitor Login Form</h2>
+                <h2>Add Hospitals Here !</h2>
             </div>
             <div class="logo-hp">
-                <img src="./images/av.jpg">
+                <img src="./images/pl.jpg">
             </div>
-            <form action="" method="post" class="input-grp">
-                <input type="text" name="email" class="input-field" placeholder="Email">
-                <input type="password" name="password" class="input-field" placeholder="Password">
+            <form action="agency_add_hospital.php" method="post" class="input-grp">
+                <input type="text" name="name" class="input-field" placeholder="Hospital Username">
+                <input type="text" name="address" class="input-field" placeholder="Hospital Address">
+                <input type="password" name="password" class="input-field" placeholder="Hospital Password">
                 <input type="hidden" name="deviceID" id="deviceID" value="">
                 <input type="submit" name="signup">
             </form>
         </div>
     </div>
+
     <?php
     if (isset($_POST['signup'])) {
+        $username = $_POST['name'];
+        $address = $_POST['address'];
+        $password = $_POST['password'];
 
-        if (!empty($_POST['email']) && !empty($_POST['password'])) {
-            $email = $_POST['email'];
-            $password = $_POST['password'];
-
-            $result = mysqli_query($conn, "SELECT visitor_email, visitor_password FROM Visitor WHERE visitor_email = '$email' AND visitor_password = '$password'");
-
-            $array = mysqli_fetch_assoc($result);
-
-            if ($array != NULL) {
-                session_start();
-                $_SESSION['vuser'] = $email;
-                header("Location: visitors_camera.php");
-            } else {
-                echo "Invalid Login, Please Try Again";
-                error_log("Invalid login", 0);
-            }
+        if ($username == '' || $address == '' || $password == '') {
+            echo 'Information cannot be empty';
+            // } elseif (!preg_match("/^[a-zA-Z ]+$/", $name)) { // Name Constraint
+            //     echo 'Invalid name';
+            //     error_log("Invalid name", 0);
+            // } elseif (!preg_match('/^[\w\.]+@\w+\.\w+$/i', $email)) { // Email Constraint
+            //     echo 'Invalid email';
+            //     error_log("Invalid email", 0);
         } else {
-            echo "All Fields Are Required!";
-            error_log("Empty required fields", 0);
+
+            // Insert into database
+            $sql = "INSERT INTO Hospital (hospital_username, hospital_address, hospital_password) VALUES ('$username', '$address', '$password')";
+            if (mysqli_query($conn, $sql)) {
+                header("Location:agency.php");
+                echo 'Hospital Added Successfully !';
+            } else {
+                echo 'Failed to register';
+            }
         }
     }
 
