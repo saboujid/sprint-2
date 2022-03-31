@@ -52,7 +52,7 @@ if (!isset($_SESSION['puser'])) {
                 }
 
                 ?>
-                <div class="form-box">
+                <div class="form-box-pr">
                     <div class="data">
                         <div class="logo-hp">
                             <img src="./images/pl.jpg">
