@@ -25,7 +25,7 @@
     ?>
 
     <div class="hero">
-        <a href="index.php" class="back"><button class="back-btn"> Go back </button></a>
+        <a href="register.php" class="back"><button class="back-btn"> Go back </button></a>
         <div class="form-box">
             <div class="hp-text">
                 <h2>Registration Form</h2>

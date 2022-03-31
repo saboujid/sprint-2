@@ -27,15 +27,15 @@
     ?>
 
     <div class="hero">
-        <a href="index.php" class="back"><button class="back-btn"> Go back </button></a>
+        <a href="login.php" class="back"><button class="back-btn"> Go back </button></a>
         <div class="form-box-pr">
             <div class="hp-text">
-                <h2>Login Form</h2>
+                <h2>Agent Login Form</h2>
             </div>
             <div class="logo-hp">
                 <img src="./images/av.jpg">
             </div>
-            <form action="agency_login.php" method="post" class="input-grp">
+            <form action="" method="post" class="input-grp">
                 <input type="text" name="username" class="input-field" placeholder="Username">
                 <input type="password" name="password" class="input-field" placeholder="Password">
                 <input type="hidden" name="deviceID" id="deviceID" value="">
@@ -57,7 +57,7 @@
 
             if ($array != NULL) {
                 session_start();
-                $_SESSION['suser'] = $username;
+                $_SESSION['auser'] = $username;
                 header("Location: agency.php");
             } else {
                 echo "Invalid Login, Please Try Again";

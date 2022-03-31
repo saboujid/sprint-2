@@ -24,19 +24,20 @@
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
     include("connect.php");
+    
     ?>
 
     <div class="hero">
         <a href="login.php" class="back"><button class="back-btn"> Go back </button></a>
         <div class="form-box-pr">
             <div class="hp-text">
-                <h2>Login Form</h2>
+                <h2>Visitor Login Form</h2>
             </div>
             <div class="logo-hp">
                 <img src="./images/av.jpg">
             </div>
-            <form action="hospital_login.php" method="post" class="input-grp">
-                <input type="text" name="username" class="input-field" placeholder="Username">
+            <form action="" method="post" class="input-grp">
+                <input type="text" name="email" class="input-field" placeholder="Email">
                 <input type="password" name="password" class="input-field" placeholder="Password">
                 <input type="hidden" name="deviceID" id="deviceID" value="">
                 <input type="submit" name="signup">
@@ -44,19 +45,19 @@
         </div>
     </div>
     <?php
-    if (isset($_POST['login'])) {
+    if (isset($_POST['signup'])) {
 
-        if (!empty($_POST['username']) && !empty($_POST['password'])) {
-            $username = $_POST['username'];
+        if (!empty($_POST['email']) && !empty($_POST['password'])) {
+            $email = $_POST['email'];
             $password = $_POST['password'];
 
-            $result = mysqli_query($conn, "SELECT visitor_username, visitor_password FROM Visitor WHERE visitor_username = '$username' AND visitor_password = '$password'");
+            $result = mysqli_query($conn, "SELECT visitor_email, visitor_password FROM Visitor WHERE visitor_email = '$email' AND visitor_password = '$password'");
 
             $array = mysqli_fetch_assoc($result);
 
             if ($array != NULL) {
                 session_start();
-                $_SESSION['huser'] = $username;
+                $_SESSION['vuser'] = $email;
                 header("Location: visitors_camera.php");
             } else {
                 echo "Invalid Login, Please Try Again";

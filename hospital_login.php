@@ -30,7 +30,7 @@
         <a href="login.php" class="back"><button class="back-btn"> Go back </button></a>
         <div class="form-box-pr">
             <div class="hp-text">
-                <h2>Login Form</h2>
+                <h2>Hospital Login Form</h2>
             </div>
             <div class="logo-hp">
                 <img src="./images/av.jpg">
