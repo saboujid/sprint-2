@@ -27,6 +27,20 @@ To run this application locally, you will have to follow the following steps:
 First of all, clone the repository. <br>
     ``` git clone https://github.com/Magrawal17/se-02-team-17.git ```
 
+Aftet that go (cd) to the project folder. <br>
+    ``` cd se-02-team-17 ```
+
+You will also need a MYSQL database for this project. To create one:
+
+    # Open MYSQL
+    $ mysql -u {Enter your username or ROOT} -p
+
+    # Once you are in your MYSQL terminal, run this command for creating the db.
+    mysql> create database seteam17;
+    mysql> use seteam17; 
+    mysql> source se_database.sql
+    mysql> exit
+
 ## Sprint 2 Changes Done:
 - [x] Restructured the databse structure as Database missed many columns in various tables. 
 - [x] Updated database entries to easier values for testing.
