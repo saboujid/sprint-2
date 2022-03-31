@@ -24,8 +24,9 @@
     error_reporting(E_ALL);
     include("connect.php");
     ?>
-    
+
     <div class="hero">
+        <a href="index.php" class="back"><button class="back-btn"> Home </button></a>
         <a href="register.php" class="back"><button class="back-btn"> Go back </button></a>
         <div class="form-box-pr">
             <div class="hp-text">

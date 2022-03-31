@@ -23,10 +23,10 @@
 </head>
 <body>
       <div class="hero">
-        <a href="index.php" class="back"><button class="back-btn" > Go back </button></a>
+        <a href="index.php" class="back"><button class="back-btn" > Home </button></a>
         <div class="form-box2">
             <div class="hp-text">
-                <h2>WHICH ONE ARE YOU?</h2>
+                <h2>Select Login Type !!! </h2>
             </div>
             <div class="title">
                 <a href="visitor_login.php"><button type="button" class="Visitor">Visitor</button></a>

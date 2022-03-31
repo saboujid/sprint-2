@@ -19,7 +19,7 @@
 
 <body>
   <div class="hero">
-    <a href="index.php" class="back"><button class="back-btn"> Go back </button></a>
+    <a href="index.php" class="back"><button class="back-btn"> Home </button></a>
     <div class="form-box-r">
       <div class="hp-text">
         <h2>WHICH ONE ARE YOU?</h2>
