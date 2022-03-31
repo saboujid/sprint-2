@@ -24,7 +24,7 @@ Corona Archive is an application that aims to track COVID (Corona) Infections vi
 ## Installation Guide:
 To run this application locally, you will have to follow the following steps:
 
-First of all, clone the repository.
+First of all, clone the repository. <br>
     ``` git clone https://github.com/Magrawal17/se-02-team-17.git ```
 
 ## Sprint 2 Changes Done:
