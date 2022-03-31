@@ -1,3 +1,5 @@
+Live Demo : http://clabsql.clamv.jacobs-university.de/~saboujid/sprint-2/index.php
+
 # SE-Sprint01-Team17
 
 Link to the application: http://clabsql.clamv.jacobs-university.de/~ftasellari/Corona/main_page.html
@@ -61,7 +63,6 @@ password:
 1. hospital_hopkins1
 2. alphahealth777
 3. service_clinic!
-
 
 
 
