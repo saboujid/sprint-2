@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # SE-Sprint-02-Team-17
 The application is hosted on Clamv. It can be accessed via: [Corona Archive](https://clabsql.clamv.jacobs-university.de/~sgiri/sprint-2/) or copy and paste the following link into your browser.
 
@@ -78,10 +77,7 @@ Corona Archive is an application that aims to track COVID (Corona) Infections vi
         password: password 
 
 #
-=======
-Live Demo : http://clabsql.clamv.jacobs-university.de/~saboujid/sprint-2/index.php
 
->>>>>>> b772050dcd187198738eddb7000785b7829f6f11
 # SE-Sprint01-Team17
 
 Link to the application: http://clabsql.clamv.jacobs-university.de/~ftasellari/Corona/main_page.html
