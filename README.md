@@ -20,7 +20,10 @@ Corona Archive is an application that aims to track COVID (Corona) Infections vi
 ## Prerequisites
 - Mysql
 - html5
-- 
+
+## Installation Guide:
+    # Clone the Repository.
+    ``` git clone https://github.com/Magrawal17/se-02-team-17.git ```
 
 ## Sprint 2 Changes Done:
 - [x] Restructured the databse structure as Database missed many columns in various tables. 
